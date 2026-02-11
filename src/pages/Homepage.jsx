@@ -1,7 +1,12 @@
 import React from "react";
+import Hero from "../components/home/Hero";
 
 const Homepage = () => {
-  return <div className="h-screen border">Homepage</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Homepage;
