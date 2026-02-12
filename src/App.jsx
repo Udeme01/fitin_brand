@@ -16,7 +16,14 @@ const App = () => {
       ],
     },
   ]);
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <RouterProvider
+      future={{
+        v7_startTransition: true,
+      }}
+      router={router}
+    ></RouterProvider>
+  );
 };
 
 export default App;

@@ -22,7 +22,7 @@ const Olu = () => {
         </section>
       </section>
 
-      <section className="w-[80%] mx-auto space-y-6 text-center">
+      <section className="w-[90%] mx-auto space-y-6 text-center">
         <Typography color="black" variant="h2">
           fitin olu
         </Typography>

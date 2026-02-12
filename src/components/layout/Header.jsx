@@ -1,13 +1,13 @@
 import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
-import { Search, ShoppingBag, UserRound } from "lucide-react";
+import { LayoutGrid, Search, ShoppingBag, UserRound } from "lucide-react";
 import DesktopMenu from "./DesktopMenu";
 // import headerlogo from "/images/brands/fitinLogo.avif";
 
 const Header = () => {
   return (
     <header>
-      <section className="flex items-center justify-between h-[10vh] w-[80%] mx-auto">
+      <section className="flex items-center justify-between h-[10vh] w-[90%] mx-auto">
         <h1 className="text-2xl uppercase font-bold tracking-wider">
           {/* <img src={headerlogo} alt="" /> */}
           fitin
@@ -15,7 +15,17 @@ const Header = () => {
         <DesktopMenu />
 
         <section className="flex items-center">
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
+            <div>
+              <h4 className="bg-red-200 px-3 py-2 rounded-lg text-red-500 flex items-center gap-2 cursor-pointer border">
+                <span>
+                  <LayoutGrid size={16} />
+                </span>
+                <span className="capitalize font-medium text-sm tracking-wide">
+                  dashboard
+                </span>
+              </h4>
+            </div>
             <Search
               size={34}
               className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
@@ -24,10 +34,15 @@ const Header = () => {
               size={34}
               className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
             />
-            <ShoppingBag
-              size={34}
-              className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
-            />
+            <div className="relative">
+              <ShoppingBag
+                size={34}
+                className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
+              />
+              <span className="text-white font-semibold text-sm text-center flex items-center justify-center absolute -top-2 right-0 bg-black/90 p-1 rounded-full w-6 h-6">
+                0
+              </span>
+            </div>
           </div>
           <div>
             <Hamburger size={18} />

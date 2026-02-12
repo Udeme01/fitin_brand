@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 
 const Wedding = () => {
   return (
-    <section className="text-center space-y-6 my-12 w-[80%] mx-auto">
+    <section className="text-center space-y-6 my-12 w-[90%] mx-auto">
       <Typography color='black' variant="h2">discover</Typography>
       <Typography variant="h1Bigger">wedding collection</Typography>
 

@@ -1,6 +1,16 @@
 import React from "react";
 
-const Typography = ({ variant, children, className, color, ...props }) => {
+const Typography = ({
+  variant = "h2",
+  children,
+  className,
+  color,
+  as,
+  ...props
+}) => {
+  const Component =
+    as || (variant === "h1" || variant === "h1Bigger" ? "h1" : "h2");
+
   const baseStyles = `uppercase tracking-widest`;
   const variantStyles = {
     h2: "font-extralight",
@@ -14,12 +24,11 @@ const Typography = ({ variant, children, className, color, ...props }) => {
   };
 
   return (
-    <h2
-      variant
-      className={`${baseStyles} ${variantStyles[variant]} ${color ? colorStyles[color] : ""}`}
+    <Component
+      className={`${baseStyles} ${variantStyles[variant] || ""} ${color ? colorStyles[color] : ""} ${className || ""}`}
     >
       {children}
-    </h2>
+    </Component>
   );
 };
 
