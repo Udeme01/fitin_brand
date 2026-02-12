@@ -15,28 +15,28 @@ const Header = () => {
         <DesktopMenu />
 
         <section className="flex items-center">
-          <div className="flex items-center gap-2">
-            <div>
-              <h4 className="bg-red-200 px-3 py-2 rounded-lg text-red-500 flex items-center gap-2 cursor-pointer border">
+          <div className="flex items-center gap-">
+            <div className="ml-1.5">
+              <h4 className="bg-red-200 px-2 py-2 rounded-lg text-red-500 flex items-center gap-2 cursor-pointer border">
                 <span>
-                  <LayoutGrid size={16} />
+                  <LayoutGrid size={14} />
                 </span>
-                <span className="capitalize font-medium text-sm tracking-wide">
+                <span className="capitalize font-semibold text-xs tracking-wide">
                   dashboard
                 </span>
               </h4>
             </div>
             <Search
-              size={34}
+              size={28}
               className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
             />
             <UserRound
-              size={34}
+              size={28}
               className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
             />
             <div className="relative">
               <ShoppingBag
-                size={34}
+                size={28}
                 className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
               />
               <span className="text-white font-semibold text-sm text-center flex items-center justify-center absolute -top-2 right-0 bg-black/90 p-1 rounded-full w-6 h-6">
