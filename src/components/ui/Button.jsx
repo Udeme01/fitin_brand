@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ variant, children, ...props }) => {
+const Button = ({ variant, children, type, ...props }) => {
   const baseClasses = `border-0 outline-0 py-3 px-8 uppercase text-sm tracking-widest cursor-pointer`;
 
   const variantClasses = {
@@ -10,7 +10,11 @@ const Button = ({ variant, children, ...props }) => {
     outlineBlack: "bg-transparent border-2 border-black",
   };
   return (
-    <button className={`${baseClasses} ${variantClasses[variant]}`} {...props}>
+    <button
+      type={type}
+      className={`${baseClasses} ${variantClasses[variant]}`}
+      {...props}
+    >
       {children}
     </button>
   );
