@@ -1,6 +1,7 @@
 import React from "react";
 
 const Input = ({
+  as = "input",
   label,
   id,
   type = "text",
@@ -10,17 +11,23 @@ const Input = ({
   disabled = false,
 }) => {
   const inputId = id || name;
+
   const { handleBlur, handleChange, values, errors, touched } = formik;
-  const hasError = errors[name] && touched[name];
-  const inputStyles = `border bg-transparent w-full md:w-56 lg:w-full py-3 px-4 text-sm placeholder:text-gray-400 focus:outline-none ${hasError ? "border-red-500" : "border-gray-600"} focus:border-white`;
+
+  // const hasError = errors[name] && touched[name];
+  const hasError = Boolean(touched[name] && errors[name]);
+
+  const inputStyles = `border bg-transparent w-full py-3 px-4 text-sm placeholder:text-gray-400 focus:outline-none ${hasError ? "border-red-500" : "border-gray-600"} focus:border-white`;
+
+  const Component = as;
 
   return (
     <div>
       {label && <label htmlFor={inputId}>{label}</label>}
-      <input
+      <Component
         id={inputId}
         name={name}
-        type={type}
+        type={as === "input" ? type : undefined}
         placeholder={placeholder}
         className={`${inputStyles}`}
         onChange={handleChange}
@@ -30,8 +37,10 @@ const Input = ({
       />
 
       {hasError ? (
-        <div className="text-red-500 tracking-wider">{errors[name]}</div>
-      ) : ""}
+        <div className="text-red-500 tracking-wider text-xs mb-6 mt-1">{errors[name]}</div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

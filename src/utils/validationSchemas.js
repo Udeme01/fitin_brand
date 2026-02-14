@@ -18,6 +18,10 @@ export const contactSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
+  phoneNumber: Yup.string()
+    .transform((value) => value.replace(/\s+/g, ""))
+    .matches(/^(\+?\d{1,3})?\d{10,14}$/, "Enter a valid phone number")
+    .required("Phone number is required"),
   message: Yup.string()
     .min(10, "Message must be at least 10 characters")
     .required("Message is required"),

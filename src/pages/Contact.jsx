@@ -1,6 +1,7 @@
 import React from "react";
 import contactimg from "/images/hero/wedding_dress_15.avif";
 import Input from "../components/ui/Input";
+import ContactForm from "../features/contact/component/ContactForm";
 
 const Contact = () => {
   return (
@@ -36,7 +37,7 @@ const Contact = () => {
       </section>
 
       {/* contact input fields */}
-      {/* there's a contact form component for this... */}
+      <ContactForm />
     </section>
   );
 };

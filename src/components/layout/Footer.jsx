@@ -87,7 +87,7 @@ const Footer = () => {
                 onSubmit={handleNewsletterSubmit}
               >
                 {(formik) => (
-                  <Form className="w-full md:w-fit lg:w-full flex flex-col gap-2">
+                  <Form className="w-full flex flex-col gap-2">
                     <Input
                       type="email"
                       placeholder="Email address"
