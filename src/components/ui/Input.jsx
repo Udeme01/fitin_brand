@@ -17,7 +17,7 @@ const Input = ({
   // const hasError = errors[name] && touched[name];
   const hasError = Boolean(touched[name] && errors[name]);
 
-  const inputStyles = `border bg-transparent w-full py-3 px-4 text-sm placeholder:text-gray-400 focus:outline-none ${hasError ? "border-red-500" : "border-gray-600"} focus:border-white`;
+  const inputStyles = `border bg-transparent w-full py-3 px-4 text-sm placeholder:text-gray-400 focus:outline-none ${hasError ? "border-red-500" : "border-gray-600"} focus:border-gray-300`;
 
   const Component = as;
 
