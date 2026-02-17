@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const DesktopMenu = () => {
   return (
-    <nav className="hidden md:block border w-full">
-      <ul className="flex items-center justify-center gap-8">
+    <nav className="hidden md:block w-fit p-2">
+      <ul className="flex items-center justify-center gap-16">
         <li className="flex items-center gap-1 cursor-pointer">
           <NavLink className="uppercase tracking-wide">fashion</NavLink>
           <ChevronDown size={20} />

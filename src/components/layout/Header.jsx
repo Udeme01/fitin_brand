@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <section className="flex items-center h-[10vh] w-[90%] mx-auto">
+      <section className="flex items-center justify-between h-[10vh] w-[90%] mx-auto">
         {/* <h1 className="text-2xl uppercase font-bold tracking-wider">
           fitin
         </h1> */}

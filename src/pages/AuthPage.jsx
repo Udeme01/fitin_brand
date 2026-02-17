@@ -1,5 +1,5 @@
 import { Formik, Form } from "formik";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { registerSchema, loginSchema } from "../utils/validationSchemas";
 import Input from "../components/ui/Input";
@@ -15,6 +15,10 @@ const AuthPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [mode]);
+
   return (
     <div className="flex items-center justify-center relative">
       <div className="w-full max-w-7xl mx-auto relative z-10">
@@ -23,7 +27,7 @@ const AuthPage = () => {
           <div className="bg-white w-[90%] mx-auto max-w-xl my-8 p-8 sm:p-10 lg:p-12 xl:p-16 shadow-2xl transform transition-all duration-500 hover:shadow-black">
             {/* Header */}
             <div className="mb-10">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-3 tracking-tight leading-tight">
                 {isLogin ? "Welcome back" : "Create your account"}
               </h1>
               <p className="text-gray-500 text-sm sm:text-base">
