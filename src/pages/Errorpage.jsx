@@ -19,7 +19,7 @@ const ErrorPage = () => {
       <div className="min-h-screen flex items-center justify-center p-4">
         <div className="max-w-2xl w-full">
           {/* Error Card */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center">
+          <div className="bg-white shadow-2xl p-8 md:p-12 text-center">
             {/* Animated 404 */}
             <div className="relative">
               <h1 className="text-9xl md:text-[12rem] font-bold text-transparent bg-clip-text bg-linear-to-r from-black to-white animate-pulse">
@@ -43,13 +43,13 @@ const ErrorPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={handleGoHome}
-                className="w-full sm:w-auto px-8 py-3 bg-black text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+                className="w-full sm:w-auto px-8 py-3 bg-black text-white font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 Go Home
               </button>
               <button
                 onClick={handleGoBack}
-                className="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-300 hover:border-gray-400 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200"
+                className="w-full sm:w-auto px-8 py-3 bg-white text-gray-700 font-semibold border-2 border-gray-300 hover:border-gray-400 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 Go Back
               </button>

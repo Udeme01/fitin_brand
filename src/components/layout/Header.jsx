@@ -2,16 +2,19 @@ import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { LayoutGrid, Search, ShoppingBag, UserRound } from "lucide-react";
 import DesktopMenu from "./DesktopMenu";
+import Logo from "../common/Logo";
+import { Link } from "react-router-dom";
 // import headerlogo from "/images/brands/fitinLogo.avif";
 
 const Header = () => {
   return (
     <header>
-      <section className="flex items-center justify-between h-[10vh] w-[90%] mx-auto">
-        <h1 className="text-2xl uppercase font-bold tracking-wider">
-          {/* <img src={headerlogo} alt="" /> */}
+      <section className="flex items-center h-[10vh] w-[90%] mx-auto">
+        {/* <h1 className="text-2xl uppercase font-bold tracking-wider">
           fitin
-        </h1>
+        </h1> */}
+        <Logo />
+
         <DesktopMenu />
 
         <section className="flex items-center">
@@ -30,10 +33,12 @@ const Header = () => {
               size={28}
               className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
             />
-            <UserRound
-              size={28}
-              className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
-            />
+            <Link to={`auth?mode="register"`}>
+              <UserRound
+                size={28}
+                className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
+              />
+            </Link>
             <div className="relative">
               <ShoppingBag
                 size={28}

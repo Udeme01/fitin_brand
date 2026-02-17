@@ -1,7 +1,7 @@
 import React from "react";
 
-const Button = ({ variant, children, type, ...props }) => {
-  const baseClasses = `border-0 outline-0 py-3 px-8 uppercase text-sm tracking-widest cursor-pointer`;
+const Button = ({ variant, children, type, className = "", ...props }) => {
+  const baseClasses = `border-0 outline-0 py-4 px-8 uppercase text-sm tracking-widest cursor-pointer transition-all duration-300 hover:scale-[0.95] active:scale-[0.9] rounded-full font-semibold`;
 
   const variantClasses = {
     solidWhite: "bg-white text-black",
@@ -12,7 +12,7 @@ const Button = ({ variant, children, type, ...props }) => {
   return (
     <button
       type={type}
-      className={`${baseClasses} ${variantClasses[variant]}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
       {...props}
     >
       {children}

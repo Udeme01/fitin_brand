@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const DesktopMenu = () => {
   return (
-    <nav className="hidden md:block">
+    <nav className="hidden md:block border w-full">
       <ul className="flex items-center justify-center gap-8">
         <li className="flex items-center gap-1 cursor-pointer">
           <NavLink className="uppercase tracking-wide">fashion</NavLink>
