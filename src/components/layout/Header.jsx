@@ -10,9 +10,6 @@ const Header = () => {
   return (
     <header>
       <section className="flex items-center justify-between h-[10vh] w-[90%] mx-auto">
-        {/* <h1 className="text-2xl uppercase font-bold tracking-wider">
-          fitin
-        </h1> */}
         <Logo />
 
         <DesktopMenu />
@@ -39,15 +36,15 @@ const Header = () => {
                 className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
               />
             </Link>
-            <div className="relative">
+            <Link to={`cart`} className="relative">
               <ShoppingBag
                 size={28}
                 className="cursor-pointer hover:bg-black/10 p-1.5 rounded-full"
               />
               <span className="text-white font-semibold text-sm text-center flex items-center justify-center absolute -top-2 right-0 bg-black/90 p-1 rounded-full w-6 h-6">
-                0
+                3
               </span>
-            </div>
+            </Link>
           </div>
           <div>
             <Hamburger size={18} />

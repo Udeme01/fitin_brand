@@ -20,7 +20,7 @@ const AuthPage = () => {
   }, [mode]);
 
   return (
-    <div className="flex items-center justify-center relative">
+    <div className="flex items-center justify-center relative min-h-screen">
       <div className="w-full max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols- gap-0 lg:gap-8 items-center">
           {/* Form */}
@@ -193,9 +193,10 @@ const AuthPage = () => {
                   )}
 
                   {/* Terms Agreement - Only for Register */}
+
                   {!isLogin && (
                     <div className="space-y-2 w-fit px-2 py-2">
-                      <div className="flex justify-center items-center gap-2">
+                      <label htmlFor="agreedToTerms">
                         <Input
                           type="checkbox"
                           name="agreedToTerms"
@@ -203,10 +204,31 @@ const AuthPage = () => {
                           showError={false}
                         />
 
-                        <label
-                          htmlFor="agreedToTerms"
-                          className="cursor-pointer flex-1"
-                        >
+                        <div className="flex items-center gap-3">
+                          <div
+                            className={`w-4 h-4 border flex items-center justify-center transition-colors ${
+                              formik.values.agreedToTerms
+                                ? "bg-stone-900 border-stone-900"
+                                : "border-stone-400"
+                            }`}
+                          >
+                            {formik.values.agreedToTerms && (
+                              <svg
+                                className="w-2.5 h-2.5 text-stone-100"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth={2.5}
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M4.5 12.75l6 6 9-13.5"
+                                />
+                              </svg>
+                            )}
+                          </div>
+
                           <span className="text-sm text-gray-600 leading-relaxed">
                             I agree to all{" "}
                             <a
@@ -230,8 +252,8 @@ const AuthPage = () => {
                               Fees
                             </a>
                           </span>
-                        </label>
-                      </div>
+                        </div>
+                      </label>
                       {formik.touched.agreedToTerms &&
                         formik.errors.agreedToTerms && (
                           <div className="text-red-500 text-xs">

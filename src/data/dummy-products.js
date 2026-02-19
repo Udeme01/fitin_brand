@@ -1,4 +1,5 @@
 export const products = [
+  //  Product 01
   {
     id: "prod_001",
     name: "Oversized Linen Blazer",
@@ -6,6 +7,7 @@ export const products = [
     description:
       "Effortlessly tailored blazer in premium European linen. Features relaxed shoulders, structured lapels, and a timeless silhouette that transitions seamlessly from day to evening.",
     price: 245.0,
+    qty: 1,
     compareAtPrice: 320.0,
     currency: "USD",
     category: "Women",
@@ -22,7 +24,7 @@ export const products = [
       "/images/products/wedding_dress_04",
       "/images/products/wedding_dress_05",
     ],
-    thumbnail: "/images/products/wedding_dress_02",
+    thumbnail: "/images/products/wedding_dress_01.avif",
     tags: ["new-arrival", "sustainable", "bestseller", "work-wear"],
     rating: 4.8,
     reviewCount: 142,
@@ -143,6 +145,7 @@ export const products = [
     description:
       "Luxurious bias-cut slip dress in pure mulberry silk. Delicate spaghetti straps and a cowl neckline create an elegant drape that flatters every silhouette.",
     price: 385.0,
+    qty: 2,
     compareAtPrice: null,
     currency: "USD",
     category: "Women",
@@ -158,7 +161,7 @@ export const products = [
       "/images/products/slip-dress-back.jpg",
       "/images/products/slip-dress-detail.jpg",
     ],
-    thumbnail: "/images/products/slip-dress-thumb.jpg",
+    thumbnail: "/images/products/wedding_dress_02.avif",
     tags: ["evening-wear", "luxury", "bestseller", "wedding-guest"],
     rating: 4.9,
     reviewCount: 89,
@@ -285,7 +288,8 @@ export const products = [
     slug: "leather-crossbody-bag",
     description:
       "Minimalist crossbody crafted from vegetable-tanned Italian leather. Features an adjustable strap, magnetic closure, and develops a unique patina over time.",
-    price: 295.0,
+    price: 500.0,
+    qty: 3,
     compareAtPrice: 380.0,
     currency: "USD",
     category: "Accessories",
@@ -301,7 +305,7 @@ export const products = [
       "/images/products/bag-side.jpg",
       "/images/products/bag-detail.jpg",
     ],
-    thumbnail: "/images/products/bag-thumb.jpg",
+    thumbnail: "/images/products/wedding_dress_03.avif",
     tags: ["accessories", "leather-goods", "everyday", "bestseller"],
     rating: 4.7,
     reviewCount: 203,
