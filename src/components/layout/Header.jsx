@@ -2,6 +2,7 @@ import React from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { LayoutGrid, Search, ShoppingBag, UserRound } from "lucide-react";
 import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
 import Logo from "../common/Logo";
 import { Link } from "react-router-dom";
 // import headerlogo from "/images/brands/fitinLogo.avif";
@@ -13,6 +14,7 @@ const Header = () => {
         <Logo />
 
         <DesktopMenu />
+        <MobileMenu />
 
         <section className="flex items-center">
           <div className="flex items-center gap-">

@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "phind.phind"
+        "phind.phind",
+        "esbenp.prettier-vscode"
     ]
 }
