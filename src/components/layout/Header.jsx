@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import { LayoutGrid, Search, ShoppingBag, UserRound } from "lucide-react";
 import DesktopMenu from "./DesktopMenu";
@@ -8,14 +8,17 @@ import { Link } from "react-router-dom";
 // import headerlogo from "/images/brands/fitinLogo.avif";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header>
       <section className="flex items-center justify-between h-[10vh] w-[90%] mx-auto">
         <Logo />
 
         <DesktopMenu />
-        <MobileMenu />
-
+        {menuOpen && (
+          <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+        )}
         <section className="flex items-center">
           <div className="flex items-center gap-">
             <div className="ml-1.5">
@@ -49,7 +52,7 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <Hamburger size={18} />
+            <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={18} />
           </div>
         </section>
       </section>
